@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Page</title>
+        <script>
+            function f1(){
+                var a=document.getElementById("para");
+                var b=document.getElementById("abc");
+                a.innerHTML="I am Rahul Chauhan!";
+                b.innerHTML="dfhgfhj fgjf gjgfkj";
+            }
+            function f2(){
+                var a=document.getElementById("para");
+                a.innerHTML="I love My INCAPP";
+
+                //or
+
+                // document.getElementById("para").innerHTML="I love My INCAPP";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="abc">Welcome to my Page.</h1>
+        <hr/>
+        <p id="para">I love my INDIA.</p>
+        <button onclick="f1()">Button 1</button>
+        <button onclick="f2()">Button 2</button>
+    </body>
+</html>

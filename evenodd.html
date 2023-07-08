@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    div{
+        width: 600px;
+        padding: 40px;
+        background-color: #FFC300;
+        box-shadow: 1px 5px #c1b9b9;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        border-radius: 20px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    input{
+        width: 200px;
+        height: 25px;
+        border: none;
+        outline: none;
+        background-color: #FF5733;
+    }
+    ::placeholder{
+        color: #fff;
+        padding-left:10px ;
+    }
+    button{
+        border: none;
+        height: 25px;
+        background-color: #C70039;
+        transition: all 0.3s ease;
+        color: #fff;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+    }
+    button:hover{
+        background-color: #900C3F;
+    }
+   </style>
+
+</head>
+<body>
+    <div>
+        <h1>Find no. is even or odd! </h1>
+        <input type="number" id="evenodd" placeholder="Enter a digit">
+        <button onclick="btn()">FIND</button>
+        <p id="btn"></p>
+    </div>
+</body>
+<script>
+    function btn(){
+        var num = document.getElementById('evenodd').value;
+        var btn =  document.getElementById('btn');
+        num2 = parseInt(num);
+        num3 = num2%2;
+
+        if(num3==0){
+            btn.innerHTML = "Even digit"
+        }
+        else{
+            btn.innerHTML= "odd digit"
+        }  
+    }
+</script>
+</html>

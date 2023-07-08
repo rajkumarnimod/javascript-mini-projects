@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+      section{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: blanchedalmond;
+        padding: 20px;
+        border: 2px solid black;
+        width: 600px;
+        text-align: center;
+      }
+      
+      p{
+        font-size: 25px;
+        font-weight: bold;
+      }
+      span{
+        text-transform: uppercase;
+      }
+      button{
+        border: 3px solid red;
+        background-color: aqua;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+      }
+      #container1{
+        float: left;
+      }
+      #container2{
+        float: right;
+      }
+      #container{
+        padding: 30px;
+      }
+      header p{
+        display: inline-block;
+        margin-right: 100px;
+      }
+      header button{
+        margin-left: 100px;
+      }
+     
+      footer{
+        margin-top: 70px;
+      }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <p id="box1">This is India</p>
+            <button type="button" onclick="f1()">Change</button>
+            <hr>
+        </header>
+        <div id="container">
+            <div id="container1">
+                <p id="box2">This is <span>Kishan</span></p>
+                <button type="button" onclick="f2()">Change</button>
+            </div>
+            <div id="container2">
+                <p id="box3">This is Incapp</p>
+                <button type="button" onclick="f3()">Change</button>
+            </div>
+        </div>
+        <footer>
+            <button onclick="Alert()">Alert Message!</button>
+        </footer>
+    </section>
+    <script>
+        function Alert(){
+            alert("Do you like this page?")
+        }
+
+        function f1(){
+            var a=document.getElementById("box1");
+            a.innerHTML="More diverse country in the world";
+        }
+
+        function f2(){
+            var b= document.getElementById("box2");
+            b.innerHTML="Hi, I'm Lucky";
+        }
+
+        function f3(){
+            var c= document.getElementById("box3");
+            c.innerHTML="Where I learn coading";
+        }
+    </script>
+</body>
+</html>

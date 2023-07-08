@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sip interest</title>
+   <style>
+     div{
+        width: 700px;
+        padding: 40px;
+        background-color: #FFC300;
+        box-shadow: 1px 5px #c1b9b9;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        border-radius: 20px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    input{
+        width: 150px;
+        height: 25px;
+        border: none;
+        outline: none;
+        background-color: #FF5733;
+    }
+
+    ::placeholder{
+        color: #fff;
+        padding-left:10px ;
+    }
+    button{
+        border: none;
+        height: 25px;
+        background-color: #C70039;
+        transition: all 0.3s ease;
+        color: #fff;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+    }
+    button:hover{
+        background-color: #900C3F;
+    }
+   </style>
+
+</head>
+<body>
+    <div>
+        <h1>Simple Interest App</h1>
+        <input type="number" id="p" placeholder="Enter a principal">
+        <input type="number" id="r" placeholder="Enter a Rate">
+        <input type="number" id="t" placeholder="Enter a Time in year">
+        <button onclick="interest()">FIND SI</button>
+        <p id="btn"></p>
+    </div>
+</body>
+<script>
+    function interest(){
+        var p = document.getElementById('p').value;
+        var r = document.getElementById('r').value;
+        var t = document.getElementById('t').value;
+        var btn =  document.getElementById('btn');
+        nump = parseInt(p);
+        numr = parseInt(r);
+        numt = parseFloat(t);
+        num3 = (nump*numr*numt)/100;
+
+        document.getElementById('btn').innerHTML = num3;
+    }
+</script>
+</html>
